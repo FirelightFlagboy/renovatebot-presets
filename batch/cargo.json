@@ -1,0 +1,20 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": [
+        "This preset will batch cargo dependencies update together if they're minor or patch update.",
+        "Major updates will not be grouped"
+    ],
+    "packageRules": [
+        {
+            "matchManagers": [
+                "cargo"
+            ],
+            "groupName": "All non-major Rust dependencies",
+            "groupSlug": "cargo-all-minor-patch",
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ]
+        }
+    ]
+}

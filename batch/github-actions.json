@@ -1,0 +1,20 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": [
+        "This preset will batch github actions dependencies update together if they're minor or patch update.",
+        "Major updates will not be grouped"
+    ],
+    "packageRules": [
+        {
+            "matchManagers": [
+                "github-actions"
+            ],
+            "groupName": "All non-major Github Actions dependencies",
+            "groupSlug": "github-actions-all-minor-patch",
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ]
+        }
+    ]
+}

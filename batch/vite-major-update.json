@@ -1,0 +1,23 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": [
+        "This preset will batch npm vite dependencies major update together"
+    ],
+    "packageRules": [
+        {
+            "matchManagers": [
+                "npm"
+            ],
+            "matchPackagePrefixes": [
+                "vitejs",
+                "@vitejs",
+                "vite"
+            ],
+            "groupName": "Vite major update",
+            "groupSlug": "vite-major-update",
+            "matchUpdateTypes": [
+                "major"
+            ]
+        }
+    ]
+}

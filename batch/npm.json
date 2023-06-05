@@ -1,0 +1,20 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": [
+        "This preset will batch npm dependencies update together if they're minor or patch update.",
+        "Major updates will not be grouped"
+    ],
+    "packageRules": [
+        {
+            "matchManagers": [
+                "npm"
+            ],
+            "groupName": "All non-major NPM dependencies",
+            "groupSlug": "npm-all-minor-patch",
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ]
+        }
+    ]
+}
